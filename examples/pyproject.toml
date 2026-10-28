@@ -1,0 +1,20 @@
+[project]
+name = "examples"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jupyterlab>=4.6.4",
+]
+
+[dependency-groups]
+ollama = [
+    "ollama>=0.6.3",
+    "opentelemetry-instrumentation-ollama>=0.62.4",
+]
+runtime = [
+    "opentelemetry-distro[otlp]>=0.66b1",
+    "opentelemetry-instrumentation>=0.66b1",
+    "python-dotenv>=1.2.4",
+]
